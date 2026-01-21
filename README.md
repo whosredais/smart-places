@@ -43,7 +43,7 @@ Pour lancer ce projet localement :
 
 1.  **Cloner le dépôt :**
     ```bash
-    git clone [https://github.com/TON_NOM_UTILISATEUR/smart-places.git](https://github.com/TON_NOM_UTILISATEUR/smart-places.git)
+    git clone [https://github.com/whosredais/smart-places.git](https://github.com/whosredais/smart-places.git)
     cd smart-places
     ```
 

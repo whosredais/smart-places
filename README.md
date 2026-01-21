@@ -1,36 +1,77 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 📍 Smart Places - Casablanca
 
-## Getting Started
+Une application de cartographie interactive moderne pour découvrir les meilleurs lieux de Casablanca (Cafés, Restaurants, Espaces de travail).
 
-First, run the development server:
+![Aperçu du projet](public/screenshot.png)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🚀 À propos
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+**Smart Places** est un dashboard interactif qui aide les utilisateurs à trouver le lieu idéal selon leur "mood" (Travail, Date, Budget). L'application se distingue par l'utilisation de données réelles géolocalisées et une expérience utilisateur fluide sans rechargement de page.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+L'objectif était de construire une alternative performante à Google Maps pour des recommandations locales, en utilisant uniquement des technologies Open Source.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## ✨ Fonctionnalités Clés
 
-## Learn More
+- **🗺️ Carte Interactive :** Navigation fluide avec Leaflet et OpenStreetMap (Zéro API payante).
+- **📍 Géolocalisation HTML5 :** Détection automatique de la position de l'utilisateur.
+- **📏 Calcul de Distance :** Algorithme (Haversine) pour afficher la distance réelle (km) vers chaque lieu.
+- **🔍 Recherche Instantanée :** Filtrage en temps réel par nom ou description.
+- **❤️ Système de Favoris :** Persistance des données via le LocalStorage du navigateur.
+- **🏷️ Catégories Intelligentes :** Filtres dynamiques (Work, Date, Budget).
+- **⏰ Statut Ouvert/Fermé :** Calcul automatique basé sur l'heure actuelle et les horaires du lieu.
+- **📱 Responsive Design :** Interface adaptée (Layout Dashboard : Sidebar + Map).
 
-To learn more about Next.js, take a look at the following resources:
+## 🛠️ Stack Technique
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Ce projet a été construit avec les dernières technologies du web moderne :
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Framework :** [Next.js 15](https://nextjs.org/) (App Router)
+- **Langage :** [TypeScript](https://www.typescriptlang.org/) (Typage strict pour la robustesse)
+- **UI/Styling :** [Tailwind CSS](https://tailwindcss.com/) (Design moderne et rapide)
+- **Cartographie :** [React-Leaflet](https://react-leaflet.js.org/) & OpenStreetMap
+- **Icônes :** Leaflet DivIcon (CSS pur)
 
-## Deploy on Vercel
+## 📂 Structure des Données
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Contrairement aux démos classiques utilisant des données aléatoires, ce projet contient une base de données de **40 lieux réels à Casablanca**.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Les coordonnées GPS ont été vérifiées via un script de géocodage utilisant l'API Nominatim d'OpenStreetMap pour garantir la précision des marqueurs (Maârif, Corniche, Sidi Maârouf, etc.).
+
+## 🚀 Installation et Démarrage
+
+Pour lancer ce projet localement :
+
+1.  **Cloner le dépôt :**
+    ```bash
+    git clone [https://github.com/TON_NOM_UTILISATEUR/smart-places.git](https://github.com/TON_NOM_UTILISATEUR/smart-places.git)
+    cd smart-places
+    ```
+
+2.  **Installer les dépendances :**
+    ```bash
+    npm install
+    ```
+
+3.  **Lancer le serveur de développement :**
+    ```bash
+    npm run dev
+    ```
+
+4.  Ouvrez [http://localhost:3000](http://localhost:3000) dans votre navigateur.
+
+## 🔮 Améliorations Futures
+
+- [ ] Ajout d'un Backend (Node.js/Express) pour gérer les utilisateurs.
+- [ ] Mode sombre (Dark Mode).
+- [ ] Système de commentaires pour chaque lieu.
+- [ ] Version mobile PWA (Progressive Web App).
+
+## 👤 Auteur
+
+**Ton Nom**
+- LinkedIn : www.linkedin.com/in/mohamed-reda-boujir-a62087294
+
+---
+*Fait avec ❤️ à Casablanca.*
+
+> **Note :** Les données géographiques ont été générées automatiquement via des scripts Node.js personnalisés (disponibles dans le dossier `/scripts`) qui interrogent l'API Nominatim d'OpenStreetMap.

@@ -56,7 +56,7 @@ function MapController({
 interface MapProps {
   places: Place[];
   userLocation: [number, number] | null;
-  selectedPlace: Place | null; // Nouvelle prop !
+  selectedPlace: Place | null; 
   onMarkerClick: (place: Place) => void; // Pour remonter l'info
 }
 
